@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 var upperCaseArray = ["A","B","C","D","E","F","G","H","I","L","M","N","O","P","Q","R","S","T","U","V","X","Y","Z"]
 var lowerCaseArray = ["a","b","C","d","e","f","g","h","i","j","k","l","m","o","p","q","r","t","u","v","x","y","z"]
-var specialCharacterArray = ["!","@","$","%","~"]
+var specialCharacterArray = ["!","@","$","%","~","(",")","*","?","/","+","#"]
 var numberArray = [1,2,3,4,5,6,7,8,9,0]
 var elementArray = []
 
