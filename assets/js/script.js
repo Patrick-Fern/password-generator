@@ -1,7 +1,7 @@
 // Assignment code here
 var generateBtn = document.querySelector("#generate");
-var upperCaseArray = ["A","B","C","D"]
-var lowerCaseArray = ["a","b","C","d"]
+var upperCaseArray = ["A","B","C","D","E","F","G","H","I","L","M","N","O","P","Q","R","S","T","U","V","X","Y","Z"]
+var lowerCaseArray = ["a","b","C","d","e","f","g","h","i","j","k","l","m","o","p","q","r","t","u","v","x","y","z"]
 var specialCharacterArray = ["!","@","$","%","~"]
 var numberArray = [1,2,3,4,5,6,7,8,9,0]
 var elementArray = []
@@ -62,16 +62,16 @@ function generatePassword() {
   var shouldUSeNumbers = addRandomNumbers()
 
   if (shouldUseUppercase) {
-    passwordString += upperCaseArray
+    passwordString += upperCaseArray.join("")
   }
   if  (shouldUseLowercase) {
-    passwordString += lowerCaseArray
+    passwordString += lowerCaseArray.join("")
   }
   if (shouldUseSpecial) {
-    passwordString += specialCharacterArray
+    passwordString += specialCharacterArray.join("")
   }
   if (shouldUSeNumbers) {
-    passwordString += numberArray
+    passwordString += numberArray.join("")
   }
   //creat a for loop that generates random values from the global arrays to fill the password to the password length determined by passLength
   for (var i = 0; i <passLength; i++) {
