@@ -1,8 +1,8 @@
 // Assignment code here
 var generateBtn = document.querySelector("#generate");
-var upperCaseArray = ["A","B","C","D"]
-var lowerCaseArray = ["a","b","C","d"]
-var specialCharacterArray = ["!","@","$","%","~"]
+var upperCaseArray = ["A","B","C","D",]
+var lowerCaseArray = ["a","b","C","d",]
+var specialCharacterArray = ["!","@","$","%","~",]
 var numberArray = [1,2,3,4,5,6,7,8,9,0]
 var elementArray = []
 
@@ -19,23 +19,19 @@ function writePassword() {
 }
 
 function generatePassword() {
-  var passwordString = ""
+  var passwordString = [""]
     function getPasswordLength() {
-    var lenghtPrompt = parseInt(window.prompt("How long would you like your password to be? enter a number between 8 and 128"));
-      if (isNaN(lenghtPrompt)) {
+    var lengthPrompt = parseInt(window.prompt("How long would you like your password to be? enter a number between 8 and 128"));
+      if (isNaN(lengthPrompt)) {
         alert("Please enter a number between 8 and 128");
         return false
       }
-      else if (lenghtPrompt <8) {
-        alert("Please enter a number larger than 7");
+      else if (lengthPrompt <8 || lengthPrompt > 128) {
+        alert("Please enter a number between 8 and 128");
         return false; 
       }  
-      else if (lenghtPrompt >128) {
-        alert("Please enter a number smaller than 129");
-        return false;
-      }
       else {
-    return lenghtPrompt;
+    return lengthPrompt;
   }
 }
   function addRandomUppercase() {
@@ -75,9 +71,13 @@ function generatePassword() {
   if (shouldUSeNumbers) {
     passwordString += numberArray
   }
-for (var i = 0; i <passLength; i++) {
-   
 
+  
+  for (var i = 0; i <passLength; i++) {
+    var random = Math.floor(Math.random() * passwordString.length);
+    return (random, passwordString[random]);
+    console.log(random, passwordString[random]);
+}
 };
 
 // Add event listener to generate button
