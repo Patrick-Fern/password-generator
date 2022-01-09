@@ -1,8 +1,8 @@
 // Assignment code here
 var generateBtn = document.querySelector("#generate");
-var upperCaseArray = ["A","B","C","D",]
-var lowerCaseArray = ["a","b","C","d",]
-var specialCharacterArray = ["!","@","$","%","~",]
+var upperCaseArray = ["A","B","C","D"]
+var lowerCaseArray = ["a","b","C","d"]
+var specialCharacterArray = ["!","@","$","%","~"]
 var numberArray = [1,2,3,4,5,6,7,8,9,0]
 var elementArray = []
 
@@ -11,15 +11,17 @@ var elementArray = []
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  generatePassword();
+  var password = elementArray.join("").replace(",","");
   var passwordText = document.querySelector("#password");
+
 
   passwordText.value = password;
 
 }
 
 function generatePassword() {
-  var passwordString = [""]
+  var passwordString = []
     function getPasswordLength() {
     var lengthPrompt = parseInt(window.prompt("How long would you like your password to be? enter a number between 8 and 128"));
       if (isNaN(lengthPrompt)) {
@@ -72,11 +74,10 @@ function generatePassword() {
     passwordString += numberArray
   }
 
-  
+  //creat a for loop that generates random values from the global arrays to fill the password to the password length determined by passLength
   for (var i = 0; i <passLength; i++) {
-    var random = Math.floor(Math.random() * passwordString.length);
-    return (random, passwordString[random]);
-    console.log(random, passwordString[random]);
+    var randomPass = passwordString[Math.floor(Math.random() * passwordString.length)];
+    elementArray.push(randomPass);
 }
 };
 
