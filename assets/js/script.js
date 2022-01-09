@@ -62,16 +62,20 @@ function generatePassword() {
   var shouldUSeNumbers = addRandomNumbers()
 
   if (shouldUseUppercase) {
-    passwordString += upperCaseArray.join("")
+    alert("You have selected Uppercase letters");
+    passwordString += upperCaseArray.join("");
   }
   if  (shouldUseLowercase) {
-    passwordString += lowerCaseArray.join("")
+    alert("You have selected lowercase letters");
+    passwordString += lowerCaseArray.join("");
   }
   if (shouldUseSpecial) {
-    passwordString += specialCharacterArray.join("")
+    alert("You have Selected special characters");
+    passwordString += specialCharacterArray.join("");
   }
   if (shouldUSeNumbers) {
-    passwordString += numberArray.join("")
+    alert("You have selected numbers");
+    passwordString += numberArray.join("");
   }
   //creat a for loop that generates random values from the global arrays to fill the password to the password length determined by passLength
   for (var i = 0; i <passLength; i++) {
