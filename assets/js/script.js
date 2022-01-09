@@ -12,7 +12,7 @@ var elementArray = []
 // Write password to the #password input
 function writePassword() {
   generatePassword();
-  var password = elementArray.join("").replace(",","");
+  var password = elementArray.join("");
   var passwordText = document.querySelector("#password");
 
 
@@ -73,7 +73,6 @@ function generatePassword() {
   if (shouldUSeNumbers) {
     passwordString += numberArray
   }
-
   //creat a for loop that generates random values from the global arrays to fill the password to the password length determined by passLength
   for (var i = 0; i <passLength; i++) {
     var randomPass = passwordString[Math.floor(Math.random() * passwordString.length)];
